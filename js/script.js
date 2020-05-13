@@ -117,7 +117,6 @@ $(document).ready(function () {
     return data.join("&");
   }
 
-  var formBooking = document.getElementById("reserve-form");
 
   var formEmail = document.getElementById("email-form");
 
@@ -209,6 +208,51 @@ $(document).ready(function () {
     } // End if
   });
 });
+// Reservation form with PHP
+if ($('#reserve-form').length) {
+  $('#reserve-form').each(function(){
+      $(this).validate({
+          errorClass: 'error wobble-error',
+          submitHandler: function(form){
+              $.ajax({
+                  type: "POST",
+                  url:"./includes/mail.php",
+                  data: $(form).serialize(),
+                  success: function() {
+                      console.log("success");            
+                          },
+
+             
+              });
+          }
+      });
+  });
+}
+if ($('#email-form').length) {
+  $('#email-form').each(function(){
+      $(this).validate({
+          errorClass: 'error wobble-error',
+          submitHandler: function(form){
+              $.ajax({
+                  type: "POST",
+                  url:"./includes/mail-2.php",
+                  data: $(form).serialize(),
+                  success: function() {
+                      console.log("success");            
+                          },
+
+             
+              });
+          }
+      });
+  });
+}
+
+
+
+
+
+
 
 
 

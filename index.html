@@ -569,34 +569,32 @@
                     <div class="form-group col-md-4 p-0  pr-md-3 pr-lg-4 ">
                         <div class=" input-field d-flex justify-content-center w-100 w-md-95 ">
                             <input type="button" value="-" class="minus">
-                            <input type="number" class="form-control d-flex justify-content-center h-18" id="guest" min='2' value="2" required name="No Guests">
+                            <input type="number" class="form-control d-flex justify-content-center h-18" id="guest" min='2' value="2" required name="guests">
                             <input type="button" value="+" class="plus">
                         </div>
                         <label class="d-flex justify-content-center align-items-center w-100 w-md-95" for="guest">guests</label>
                     </div>
                     <div class="form-group date col-md-4 p-0 px-md-1 px-lg-2 px-xl-3">
                         <input type="text" class="form-control mx-md-auto w-100 w-md-95" id="date" placeholder="MM/DD" required autocomplete="off"
-                            minlength="7" maxlength="7" name="Date">
+                             name="Date">
                         <label for="date" class="d-flex justify-content-center align-items-center mx-md-auto w-100 w-md-95">date</label>
                     </div>
                     <div class="form-group col-md-4 p-0 pl-md-3  pl-lg-4 ">
-                        <input type="text" class="form-control ml-md-auto w-100 w-md-95" id="time" placeholder="hh:mm" minlength="7" maxlength="7"
+                        <input type="text" class="form-control ml-md-auto w-100 w-md-95" id="time" placeholder="hh:mm"
                             required name="Time">
                         <label for="time" class="d-flex justify-content-center align-items-center ml-md-auto w-100 w-md-95">time</label>
                     </div>
                 </div>
                 <div class="form-group my-3 w-100 mx-4">
-                    <input type="text" class="form-control w-100" id="name" placeholder="name" required name="Name">
+                    <input type="text" class="form-control w-100" id="name" placeholder="name" required name="name">
                 </div>
                 <div class="form-group my-3 w-100 mx-4 text-left">
-                    <input type="email" class="form-control w-100" id="email-booking" placeholder="email" required name="Email">
+                    <input type="email" class="form-control w-100" id="email-booking" placeholder="email" required name=email">
                 </div>
                 <div class="form-group my-3 w-100 mx-4 text-left">
-                    <input type="tel" name="Phone" class="form-control w-100" placeholder="Phone Number" id="phone" required>
+                    <input type="tel" name="phone" class="form-control w-100" placeholder="Phone Number" id="phone" required>
                 </div>
-                <input type="hidden" name="_to" value="grei@aledia.ca">
-                <input type="text" name="_gotcha" style="display: none;">
-                <input type="hidden" name="_subject" value="Reservation">
+   
                 <input type="submit" class="btn btn-primary" value="Reserve">
             </form>
         </div>
@@ -1045,7 +1043,7 @@
                     </div>
                     <div class="col-lg-4 order-lg-2 order-1  ">
                         <h6 class="header">newsletter sign up</h6>
-                        <form class="email-form" id="email-form" method="post" action="php/mailer.php">
+                        <form class="email-form" id="email-form" method="post" >
                             <input type="hidden" name="_subject" value="Email Subscription">
                             <input type="email" placeholder="Your email" required class="email" name="Email">
                             <button type="submit" class="btn btn-primary"> SUBMIT
@@ -1174,6 +1172,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <!--main js of the web page-->
     <script src="js/script.js"></script>
     <script>
