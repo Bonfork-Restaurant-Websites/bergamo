@@ -208,7 +208,8 @@ $(document).ready(function () {
     } // End if
   });
 });
-// Reservation form with PHP
+
+
 if ($('#reserve-form').length) {
   $('#reserve-form').each(function(){
       $(this).validate({
